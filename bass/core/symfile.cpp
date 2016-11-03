@@ -6,7 +6,9 @@ void Bass::appendSymfile(const string& entry) {
 void Bass::appendSymfile(const string& label, unsigned data) {
   if(writePhase()) {
     string scopedName = label;
-    if(scope.size()) scopedName = {scope.merge("."), ".", label};
+    bool rootScope = scopedName.beginsWith("::");
+    if(!rootScope && scope.size()) scopedName = {scope.merge("."), ".", label};
+
     string entry = {hex<8, '0'>(data), " ", scopedName, "\n"};
     symfileBuffer.append(entry);
   }

@@ -29,7 +29,7 @@ bool Bass::assemble(const string& statement) {
       setConstant(s.rtrim<1>(":"), pc());
       appendSymfile(s, pc());
     }
-    if(s) validateName(s);
+    if(s) validateName(s, false);
     scope.append(s);
     return true;
   }

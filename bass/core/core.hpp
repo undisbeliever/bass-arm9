@@ -184,7 +184,7 @@ protected:
   string filepath();
   string text(string s);
   int64_t character(string s);
-  void validateName(const string& name);
+  void validateName(const string& name, bool allowScopeless);
 };
 
 // vim:sts=2 sw=2
