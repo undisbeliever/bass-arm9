@@ -86,6 +86,7 @@ ora $FE
 
 ora.w #$FEDC
 ora.b #$FE
+ora.w $FEDC,y
 ora.l $FEDCBA,x
 ora.w $FEDC,x
 ora.b $FE,x
@@ -112,6 +113,7 @@ and $FE
 
 and.w #$FEDC
 and.b #$FE
+and.w $FEDC,y
 and.l $FEDCBA,x
 and.w $FEDC,x
 and.b $FE,x
@@ -138,6 +140,7 @@ eor $FE
 
 eor.w #$FEDC
 eor.b #$FE
+eor.w $FEDC,y
 eor.l $FEDCBA,x
 eor.w $FEDC,x
 eor.b $FE,x
@@ -164,6 +167,7 @@ adc $FE
 
 adc.w #$FEDC
 adc.b #$FE
+adc.w $FEDC,y
 adc.l $FEDCBA,x
 adc.w $FEDC,x
 adc.b $FE,x
@@ -186,6 +190,7 @@ sta $FEDCBA
 sta $FEDC
 sta $FE
 
+sta.w $FEDC,y
 sta.l $FEDCBA,x
 sta.w $FEDC,x
 sta.b $FE,x
@@ -212,6 +217,7 @@ lda $FE
 
 lda.w #$FEDC
 lda.b #$FE
+lda.w $FEDC,y
 lda.l $FEDCBA,x
 lda.w $FEDC,x
 lda.b $FE,x
@@ -238,6 +244,7 @@ cmp $FE
 
 cmp.w #$FEDC
 cmp.b #$FE
+cmp.w $FEDC,y
 cmp.l $FEDCBA,x
 cmp.w $FEDC,x
 cmp.b $FE,x
@@ -264,6 +271,7 @@ sbc $FE
 
 sbc.w #$FEDC
 sbc.b #$FE
+sbc.w $FEDC,y
 sbc.l $FEDCBA,x
 sbc.w $FEDC,x
 sbc.b $FE,x
@@ -397,6 +405,7 @@ stx $FE,y
 stx $FEDC
 stx $FE
 
+stx.b $FE,y
 stx.w $FEDC
 stx.b $FE
 
